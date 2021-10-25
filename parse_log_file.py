@@ -4,7 +4,9 @@ from datetime import datetime
 import pytz
 import io
 
+
 LOG_ENDPOINT = "https://s3.amazonaws.com/syseng-challenge/public_access.log.txt"
+LOG_FILE = ""
 
 log_content = requests.get(LOG_ENDPOINT).text
 
@@ -31,4 +33,7 @@ def read_log_data():
                     'size': int,
                     'referer': parse_str,
                     'user_agent': parse_str})
+    
     return data
+
+    
