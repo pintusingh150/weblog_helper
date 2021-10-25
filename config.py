@@ -1,0 +1,1 @@
+LOG_ENDPOINT = "https://s3.amazonaws.com/syseng-challenge/public_access.log.txt"

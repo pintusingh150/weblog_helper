@@ -1,12 +1,7 @@
-import argparse
 from typing import final
 from requests.sessions import session
 import ipaddress
 from parse_log_file import *
-
-parser = argparse.ArgumentParser(prog='wlh', description='Find the logs for IP/CIDR.')
-parser.add_argument('ip', metavar='<ip>', help='Pass IP/CIDR address to search the logs.')
-args = parser.parse_args()
 
 def view_logs_ip(ip_address):
     log_df = read_logs()
@@ -34,9 +29,6 @@ def view_logs(cidr_range):
     except:
         print('The CIDR/IP {0} provided is not valid.Please provide a valid IP/CIDR'.format(cidr_range))
         exit()
-
-
-view_logs(args.ip)
 
 
 

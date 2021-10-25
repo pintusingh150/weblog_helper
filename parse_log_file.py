@@ -3,12 +3,9 @@ import requests
 from datetime import datetime
 import pytz
 import io
+import config
 
-
-LOG_ENDPOINT = "https://s3.amazonaws.com/syseng-challenge/public_access.log.txt"
-LOG_FILE = ""
-
-log_content = requests.get(LOG_ENDPOINT).text
+log_content = requests.get(config.LOG_ENDPOINT).text
 
 def parse_str(x):
     return x[1:-1]
