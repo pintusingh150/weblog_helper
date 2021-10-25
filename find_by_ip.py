@@ -25,3 +25,13 @@ cidr_pattern = re.compile('/^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([8-9]|[1-2][0-9]|3[0
 
 def find(ip_address):
     if(cidr_pattern.ma)
+
+
+
+print(ip_address)
+        length = len(log_data_frame.loc[log_data_frame['ip'] == ip_address])
+        print(log_data_frame.loc[log_data_frame['ip'] == '31.184.238.128'
+        if(length!= 0):
+            print(log_data_frame.loc[log_data_frame['ip'] == ip_address])
+        else:
+            print('No matching Logs found for IP {0}'.format(ip_address)) 
